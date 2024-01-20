@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sample Site</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"/>
+    <style>
+        body {
+            background: linear-gradient(to right, #4ec8b4, #fbc18f, #ed8ffb, #c84e68);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            overflow: hidden;
+        }
+        
+        #loginbox {
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px 2px #000;
+        }
+        
+        .panel-heading {
+            background-color: #3f51b5;
+            color: #fff;
+            border-radius: 10px 10px 0 0;
+        }
+        
+        .panel-title {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        
+        .panel-body {
+            padding-top: 30px;
+        }
+        
+        .form-control {
+            border-radius: 25px;
+            height: 50px;
+            background-color: rgba(255, 255, 255, 0.7);
+            border: none;
+            margin-bottom: 20px;
+            color: #555;
+        }
+        
+        .form-control:focus {
+            outline: none;
+            box-shadow: none;
+        }
+        
+        .btn-success {
+            background-color: #4caf50;
+            border-color: #4caf50;
+            border-radius: 25px;
+            height: 50px;
+            width: 100%;
+        }
+        
+        .btn-success:hover {
+            background-color: #45a049;
+            border-color: #45a049;
+        }
+        
+        .alert {
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">   
+        <div id="loginbox" style="margin-top:50px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">                   
+            <div class="panel panel-info" >
+                <div class="panel-heading">
+                    <div class="panel-title">Sign In</div>
+                </div>    
+                <div style="padding-top:30px" class="panel-body" >
+                    <% if (message.length > 0) { %>
+                        <div class="alert alert-danger col-sm-12"><%= message %></div>
+                    <% } %>
+                    <form id="loginform" class="form-horizontal" role="form" method="post" action="/login">
+                        <div style="margin-bottom: 25px" class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                            <input id="login-username" type="text" class="form-control" name="user_name" value="" placeholder="Username">                                       
+                        </div>
+                        <div style="margin-bottom: 25px" class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                            <input id="login-password" type="password" class="form-control" name="password" placeholder="Password">
+                        </div>
+                        <div style="margin-top:10px" class="form-group">
+                            <div class="col-sm-12 controls">
+                                <button id="btn-login" type="submit" class="btn btn-success">Login</button>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-12 control">
+                                <div style="border-top: 1px solid #888; padding-top:15px; font-size:85% ; color:red" >
+                                    Don't have an account!
+                                    <a href="/signup">Sign Up Here</a>
+                                </div>
+                            </div>
+                        </div>   
+                    </form>    
+                </div>                    
+            </div> 
+        </div>
+    </div>
+</body>
+</html>

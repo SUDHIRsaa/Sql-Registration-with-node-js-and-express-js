@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Sample Site</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" />
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+    <style>
+        body {
+            background: linear-gradient(to right, #4e54c8, #8f94fb);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .navbar {
+            background-color: #3f51b5;
+            border: none;
+            border-radius: 0;
+            margin-bottom: 0;
+        }
+
+        .navbar-default .navbar-nav>li>a {
+            color: #fff;
+        }
+
+        .navbar-default .navbar-nav>li>a:hover {
+            color: #efefef;
+        }
+
+        .jumbotron {
+            background: linear-gradient(to right, #9575cd, #b39ddb);
+            color: #fff;
+            padding: 50px;
+            margin-top: 20px;
+            border-radius: 15px;
+        }
+
+        .jumbotron h1 {
+            font-size: 3em;
+        }
+
+        .jumbotron p {
+            font-size: 1.5em;
+        }
+
+        .jumbotron a.btn-primary {
+            background-color: #4caf50;
+            border-color: #4caf50;
+            border-radius: 25px;
+            padding: 10px 20px;
+            font-size: 1.2em;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .jumbotron a.btn-primary:hover {
+            background-color: #45a049;
+            border-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="/home/dashboard">Home</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="/home/logout">Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="jumbotron">
+            <h1>Welcome</h1>
+            <p>Hello Dashboard</p>
+            <p>
+                <a class="btn btn-lg btn-primary" href="/home/profile" title="">Profile View </a>
+            </p>
+            
+        </div>
+    </div>
+</body>
+
+</html>

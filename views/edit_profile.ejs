@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Profile</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: tomato;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            border-radius: 5px;
+            width: 400px;
+        }
+
+        h2 {
+            color: #333;
+            text-align: center;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            color: #555;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        input {
+            padding: 10px;
+            width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="password"] {
+            margin-top: 5px;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        p {
+            color: #ff0000;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Edit Profile</h2>
+        <% if(data.length > 0) { %>
+            <form action="/updateprofile" method="post">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="user_name" value="<%= data[0].name %>" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="username">First Name</label>
+                    <input type="text" id="username" name="first_name" value="<%= data[0].first_name %>" required>
+                </div>
+                <div class="form-group">
+                    <label for="username">Last Name</label>
+                    <input type="text" id="username" name="last_name" value="<%= data[0].last_name %>" required>
+                </div>
+                <div class="form-group">
+                    <label for="username">Mobile No</label>
+                    <input type="text" id="username" name="mob_no" value="<%= data[0].mob_no %>" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Enter new password">
+                </div>
+                <div class="form-group">
+                    <button type="submit">Update Profile</button>
+                </div>
+            </form>
+        <% } else { %>
+            <p>User not found</p>
+        <% } %>
+    </div>
+</body>
+
+</html>
